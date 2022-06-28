@@ -1,0 +1,15 @@
+code 1 -
+https://leetcode.com/problems/next-greater-element-i/submissions/
+class Solution:
+    def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        for i in range(len(nums1)):
+            j, k = 0, -1
+            while nums2[j] != nums1[i] : j += 1
+            while j < len(nums2):
+                if nums2[j] > nums1[i]:
+                    k = nums2[j]
+                    break
+                j += 1
+            nums1[i] = k
+        return nums1
+ 
