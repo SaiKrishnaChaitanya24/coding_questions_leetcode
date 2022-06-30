@@ -12,3 +12,11 @@ class Solution:
         for j in range(0,len(nums)):
             if nums[j]==target:
                 return j
+Here is question 2 -
+https://leetcode.com/problems/implement-strstr/
+The code that I have written is :
+class Solution(object):
+       def strStr(self, haystack, needle):
+        if needle in haystack:
+            return haystack.index(needle)
+        return -1
