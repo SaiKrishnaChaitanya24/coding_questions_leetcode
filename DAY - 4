@@ -1,0 +1,10 @@
+First question is -
+https://leetcode.com/problems/contains-duplicate/
+code that I have written is-
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        nums.sort()
+        for i in range(len(nums)-1):
+            if nums[i] == nums[i+1]:
+                return True
+        return False
