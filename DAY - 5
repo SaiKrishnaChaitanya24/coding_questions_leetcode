@@ -1,0 +1,26 @@
+First question for today - 
+https://leetcode.com/problems/add-binary/
+code is written as follows - 
+class Solution:
+    def addBinary(self, a: str, b: str) -> str:
+        s = ""
+        k = int(a , 2)
+        l = int(b, 2)
+        o = k + l
+        p = bin(o)
+        for num in range(2,len(p)):
+            s += p[num]
+        return s
+ Second question is -
+ https://leetcode.com/problems/majority-element/
+solution that I have written is -
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        o = {}
+        count = 0
+        for i in nums:
+            if i not in o:
+                o[i] = 1
+            else:
+                o[i] +=1
+        return max(o, key = o.get)
