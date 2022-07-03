@@ -24,3 +24,15 @@ class Solution:
             else:
                 o[i] +=1
         return max(o, key = o.get)
+Third question is -
+https://leetcode.com/problems/single-number/
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        o = {}
+        count = 0
+        for i in nums:
+            if i not in o:
+                o[i] = 1
+            else:
+                o[i] +=1
+        return min(o, key = o.get)
