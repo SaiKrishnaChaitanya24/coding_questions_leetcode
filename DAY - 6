@@ -57,6 +57,7 @@ seq = func_name('Fibonacci')
 print(seq) --> (1, 2, 3, 5, 8, 13, 21, ..., 89)
 
 code is as follows-
+import collections
 fibonacci = []
 a = 1 
 b = 1
@@ -69,12 +70,15 @@ while c < 100:
   a = b
   b = c
 is_prime = []
-start_val = 1
-for num in range(1, 100+1):
+for num in range(1, 101):
     if(num>1):
         for i in range(2,num):
             if(num%i)==0:
-                is_prime.append(num)
+              break
+        else:
+          is_prime.append(num)
+                
+print(is_prime)
 num_dict = {}
 for i in range(1, 101):
   if i not in num_dict:
@@ -86,4 +90,4 @@ for i in range(1, 101):
       num_dict[i].append('Fibonacci')
   if i in is_prime:
       num_dict[i].append('Prime')
-print(num_dict)
+print(collections.OrderedDict(sorted(num_dict.items())))
