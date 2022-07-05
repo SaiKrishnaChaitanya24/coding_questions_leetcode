@@ -19,3 +19,21 @@ class Solution:
                     i+=1
         return False
             
+question 2 -
+https://leetcode.com/problems/counting-bits/
+code is as follows -
+class Solution:
+    def countBits(self, n: int) -> List[int]:
+        l = []
+        k = []
+        p =[]
+        # k.append(0)
+        # count = 0
+        for i in range(0,n+1):
+            z = str(bin(i))
+            t = z[2:]
+            p.append(t)
+        for l in p:
+             z = l.count('1')
+             k.append(z)
+        return k 
