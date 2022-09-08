@@ -1,0 +1,30 @@
+question 1-
+https://leetcode.com/problems/roman-to-integer/
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        d = {}
+        count = 0
+        i = 0
+        d['I'] = 1
+        d['V'] = 5
+        d['X'] = 10
+        d['L'] = 50
+        d['C'] = 100
+        d['D'] = 500
+        d['M'] = 1000
+        for i in range(0,len(s)): 
+            if s[i] in d.keys():
+                if i < len(s)-1: 
+                    if d[s[i]] >= d[s[i+1]]:
+                        count+= d[s[i]]
+                        continue
+                    else:
+                        count = count - (d[s[i]])
+                        continue
+                else:
+                    count += d[s[i]]
+        return count
+    
+question 2-
+
+    
