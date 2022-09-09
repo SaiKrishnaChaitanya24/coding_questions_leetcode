@@ -38,4 +38,14 @@ class Solution:
             left+=1
             right-=1
         return True
-  
+  question - 4
+  https://leetcode.com/problems/is-subsequence/
+  class Solution:
+    def isSubsequence(self, s: str, t: str) -> bool:
+        x = 0
+        for i in range(0,len(t)):
+            if t[i] == s[x] and x<len(s):
+                x+=1
+            if x==len(s):
+                return True
+        return False
