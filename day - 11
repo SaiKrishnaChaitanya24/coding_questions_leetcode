@@ -1,0 +1,10 @@
+question - 1
+https://leetcode.com/problems/middle-of-the-linked-list/
+class Solution:
+    def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        l = []
+        while head != None:
+            l.append(head)
+            head=head.next
+        return l[(len(l))//2]
+   
