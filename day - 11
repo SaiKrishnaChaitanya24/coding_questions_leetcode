@@ -8,3 +8,18 @@ class Solution:
             head=head.next
         return l[(len(l))//2]
    
+question - 2
+https://leetcode.com/problems/linked-list-cycle/
+class Solution:
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+        if head is None:
+            return False
+        elif (head.next is None):
+            return False
+        else:
+            while head.next is not None:
+                if head.val == None:
+                    return True
+                head.val= None
+                head = head.next
+        return False
